@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solar System</title>
+    <link rel="stylesheet" href="style_sheet.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- اضغط على الشمس لفتح نافذة منبثقة -->
+        <div class="sun" id="sunPopup" onclick="openPopup('sunPopup')">
+            <img src="img/sun.png" alt="sun">
+        </div>
+        <div class="mercury item">
+            <div class="mercury-img" id="mercuryPopup" onclick="openPopup('mercuryPopup')">Mercury</div>
+        </div>
+
+        <div class="venus item">
+            <div class="venus-img" id="venusPopup" onclick="openPopup('venusPopup')">Venus</div>
+        </div>
+        <div class="earth item">
+            <div class="earth-img" id="earthPopup" onclick="openPopup('earthPopup')">Earth</div>
+            <div class="moon">
+                <div class="moon-img"></div>
+            </div>
+        </div>
+        <div class="mars item">
+            <div class="mars-img" id="marsPopup" onclick="openPopup('marsPopup')">Mars</div>
+        </div>
+        <div class="jupiter item">
+            <div class="jupiter-img" id="jupiterPopup" onclick="openPopup('jupiterPopup')">Jupiter</div>
+        </div>
+        <div class="saturn item">
+            <div class="saturn-img" id="saturnPopup" onclick="openPopup('saturnPopup')">Saturn</div>
+        </div>
+        <div class="uranus item">
+            <div class="uranus-img" id="uranusPopup" onclick="openPopup('uranusPopup')">Uranus</div>
+        </div>
+        <div class="neptune item">
+            <div class="neptune-img" id="neptunePopup" onclick="openPopup('neptunePopup')">Neptune</div>
+        </div>
+        <div class="pluto item">
+            <div class="pluto-img" id="plutoPopup" onclick="openPopup('plutoPopup')">Pluto</div>
+        </div>
+
+
+        <div id="sunPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('sunPopup')">&times;</span>
+                <h2>Sun</h2>
+                <p>معلومات عن الشمس...</p>
+            </div>
+        </div>
+
+
+        <div id="mercuryPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('mercuryPopup')">&times;</span>
+                <h2>Mercury</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quibusdam vero consequuntur quae eius
+                    quod corrupti dolorem pariatur assumenda, necessitatibus quisquam labore? Dolorem repudiandae
+                    molestias fuga excepturi incidunt ea dolor!</p>
+            </div>
+        </div>
+
+
+        <div id="venusPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('venusPopup')">&times;</span>
+                <h2>Venus</h2>
+                <p>معلومات عن الزهرة...</p>
+            </div>
+        </div>
+        <div id="earthPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('earthPopup')">&times;</span>
+                <h2>earth</h2>
+                <p>معلومات عن الزهرة...</p>
+            </div>
+        </div>
+        <div id="marsPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('marsPopup')">&times;</span>
+                <h2>mars</h2>
+                <p>معلومات عن الزهرة...</p>
+            </div>
+        </div>
+        <div id="jupiterPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('jupiterPopup')">&times;</span>
+                <h2>jupiter</h2>
+                <p>معلومات عن الزهرة...</p>
+            </div>
+        </div>
+        <div id="saturnPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('saturnPopup')">&times;</span>
+                <h2>saturn
+                </h2>
+                <p>معلومات عن الزهرة...</p>
+            </div>
+        </div>
+        <div id="uranusPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('uranusPopup')">&times;</span>
+                <h2>uranus</h2>
+                <p>معلومات عن الزهرة...</p>
+            </div>
+        </div>
+        <div id="neptunePopup'" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('neptunePopup')">&times;</span>
+                <h2>neptune</h2>
+                <p>معلومات عن الزهرة...</p>
+            </div>
+        </div>
+        <div id="plutoPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('plutoPopup')">&times;</span>
+                <h2>pluto</h2>
+                <p>معلومات عن الزهرة...</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- <script>
+        function openPopup(popupId) {
+            document.getElementById(popupId).style.display = 'block';
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+    </script> -->
+
+</body>
+
+</html>
