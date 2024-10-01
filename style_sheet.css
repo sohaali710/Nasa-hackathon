@@ -44,6 +44,9 @@ img {
   box-shadow: 0 0 3em rgb(255, 128, 0);
   animation: orbit 50s linear infinite;
 }
+.sun-img img {
+  transition: width 1s ease, height 1s ease;
+}
 .sun-img.big-size img {
   height: 100vh;
   width: 100vh;
@@ -226,6 +229,8 @@ img {
   position: absolute;
   border-radius: 50%;
   animation: orbit 30s linear infinite;
+
+  transition: width 1s ease, height 1s ease;
 }
 .mercury-img::before {
   top: 1.5em;
