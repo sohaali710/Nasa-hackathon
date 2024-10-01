@@ -15,6 +15,31 @@
         <div class="row">
             <div class="col-3">
                 <div class="planet-info">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable border ">
+                            <div class="modal-content text-light ">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Planet Info</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h2></h2>
+                                    <div class="container-img">
+                                        <img class="img-pop">
+                                    </div>
+                                    <P class="modal-text"></P>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-7 middle-col">
@@ -60,7 +85,7 @@
             </div>
             <div class="col-2">
                 <div class="planets-select">
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <select class="form-select form-select-sm">
                         <option value="all" selected>Solar System</option>
                         <option value="sun">sun</option>
                         <option value="mercury">mercury</option>
@@ -84,15 +109,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="script.js"></script>
-    <!-- <script>
-        function openPopup(popupId) {
-            document.getElementById(popupId).style.display = 'block';
-        }
-
-        function closePopup(popupId) {
-            document.getElementById(popupId).style.display = 'none';
-        }
-    </script> -->
 
 </body>
 

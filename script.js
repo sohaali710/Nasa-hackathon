@@ -1,20 +1,38 @@
-// function openPopup(popupId) {
-//   const planet = document.getElementById(popupId);
-//   console.log(planet);
-//   //   planet.setAttribute("class", "popup");
-// }
+document
+  .querySelector(".form-select")
+  .addEventListener("change", async function () {
+    const selectedPlanet = this.value;
+    console.log("Selected option value:", selectedPlanet);
 
-document.querySelector(".form-select").addEventListener("change", function () {
-  const selectedPlanet = this.value;
-  console.log("Selected option value:", selectedPlanet);
+    if (selectedPlanet == "all") {
+      returnToNormal();
+    } else {
+      maximizePlanet(selectedPlanet);
+      const planetInfo = await fetchPlanetData(selectedPlanet);
 
-  if (selectedPlanet == "all") {
-    returnToNormal();
-  } else {
-    fetchPlanetData(selectedPlanet);
-    maximizePlanet(selectedPlanet);
-  }
-});
+      const myModal = new bootstrap.Modal(
+        document.getElementById("exampleModal"),
+        {}
+      );
+      myModal.show();
+
+      const modalHead = document.querySelector(".modal-body h2");
+      modalHead.innerHTML = selectedPlanet;
+
+      const modalText = document.querySelector(".modal-text");
+      console.log(planetInfo);
+      modalText.innerHTML = planetInfo;
+      // console.log(modalText.querySelectorAll("p")[1].textContent);
+      // modalText.innerHTML =
+      //   modalText.querySelectorAll("p")[1].textContent.length > 400
+      //     ? modalText.querySelectorAll("p")[1].textContent.substring(0, 400) +
+      //       "..."
+      //     : modalText.querySelectorAll("p")[1].textContent;
+
+      const modalImg = document.querySelector(".img-pop");
+      modalImg.setAttribute("src", `img/${selectedPlanet}.png`);
+    }
+  });
 
 async function fetchPlanetData(planet) {
   const url = `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=${planet}&origin=*`;
@@ -29,7 +47,8 @@ async function fetchPlanetData(planet) {
 
     const planetInfo = document.querySelector(".planet-info");
     const page = Object.values(data.query.pages)[0];
-    planetInfo.innerHTML = page.extract;
+
+    return page.extract;
   } catch (error) {
     console.error("Error fetching data:", error);
   }
