@@ -95,34 +95,34 @@ function returnToNormal() {
                         </div>
                     </div>
                     <div class="mercury">
-                        <div class="mercury-img item" id="mercuryPopup">Mercury</div>
+                        <div class="mercury-img item" id="mercuryPopup"></div>
                     </div>
 
                     <div class="venus">
-                        <div class="venus-img item" id="venusPopup">Venus</div>
+                        <div class="venus-img item" id="venusPopup"></div>
                     </div>
                     <div class="earth">
-                        <div class="earth-img item" id="earthPopup">Earth</div>
+                        <div class="earth-img item" id="earthPopup"></div>
                         <div class="moon">
                             <div class="moon-img item" id="moonPopup"></div>
                         </div>
                     </div>
                     <div class="mars">
-                        <div class="mars-img item" id="marsPopup">Mars</div>
+                        <div class="mars-img item" id="marsPopup"></div>
                     </div>
                     <div class="jupiter">
-                        <div class="jupiter-img item" id="jupiterPopup">Jupiter</div>
+                        <div class="jupiter-img item" id="jupiterPopup"></div>
                     </div>
                     <div class="saturn">
-                        <div class="saturn-img item" id="saturnPopup">Saturn</div>
+                        <div class="saturn-img item" id="saturnPopup"></div>
                     </div>
                     <div class="uranus">
-                        <div class="uranus-img item" id="uranusPopup">Uranus</div>
+                        <div class="uranus-img item" id="uranusPopup"></div>
                     </div>
                     <div class="neptune">
-                        <div class="neptune-img item" id="neptunePopup">Neptune</div>
+                        <div class="neptune-img item" id="neptunePopup"></div>
                     </div>
                     <div class="pluto">
-                        <div class="pluto-img item" id="plutoPopup">Pluto</div>
+                        <div class="pluto-img item" id="plutoPopup"></div>
                     </div>`;
 }
