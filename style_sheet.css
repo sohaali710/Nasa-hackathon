@@ -226,6 +226,8 @@ img {
   position: absolute;
   border-radius: 50%;
   animation: orbit 30s linear infinite;
+
+  transition: width 1s ease, height 1s ease;
 }
 .mercury-img::before {
   top: 1.5em;
