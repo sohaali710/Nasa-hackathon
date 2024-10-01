@@ -1,23 +1,37 @@
 body {
   margin: 0;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url(img/stars.jpeg);
   overflow: hidden;
 }
 .container {
+  height: 100%;
+
+  padding: 80px 0;
+}
+.row {
+  height: 100%;
+}
+.middle-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.solar-system {
   font-size: 6px;
   width: 40em;
   height: 40em;
-  position: relative;
+  /* position: relative; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 img {
   height: 130%;
   width: 130%;
 }
-.sun {
+.sun-img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,6 +44,11 @@ img {
   box-shadow: 0 0 3em rgb(255, 128, 0);
   animation: orbit 50s linear infinite;
 }
+.sun-img.big-size img {
+  height: 100vh;
+  width: 100vh;
+}
+
 .mercury,
 .venus,
 .earth,
@@ -42,8 +61,6 @@ img {
 .pluto {
   position: absolute;
   border-style: solid;
-  /* border-color: transparent transparent transparent white;
-  border-width: 0.1em 0 0 0.1em; */
   border-color: white transparent transparent transparent;
   border-width: 0.1em 0.1em 0 0;
   border-radius: 50%;
@@ -53,19 +70,6 @@ img {
   margin-bottom: 10px;
 }
 
-/* .mercury span,
-  .venus span,
-  .earth span,
-  .moon span,
-  .mars span,
-  .jupiter span,
-  .saturn span,
-  .uranus span,
-  .neptune span,
-  .pluto span {
-    cursor: pointer;
-    padding: 5px;
-  } */
 .mercury {
   top: 12.5em;
   left: 12.5em;
@@ -76,6 +80,8 @@ img {
 .mercury-img {
   width: 2em;
   height: 2em;
+
+  transition: width 0.5s, height 0.5s;
 }
 
 .venus {
@@ -88,6 +94,8 @@ img {
 .venus-img {
   width: 2em;
   height: 2em;
+
+  transition: width 0.5s, height 0.5s;
 }
 
 .earth {
@@ -100,6 +108,8 @@ img {
 .earth-img {
   width: 5em;
   height: 5em;
+
+  transition: width 0.5s, height 0.5s;
 }
 
 .moon {
@@ -112,6 +122,8 @@ img {
 .moon-img {
   width: 3em;
   height: 3em;
+
+  transition: width 0.5s, height 0.5s;
 }
 
 .mars {
@@ -124,6 +136,8 @@ img {
 .mars-img {
   width: 3em;
   height: 3em;
+
+  transition: width 0.5s, height 0.5s;
 }
 
 .jupiter {
@@ -136,6 +150,8 @@ img {
 .jupiter-img {
   width: 5em;
   height: 5em;
+
+  transition: width 0.5s, height 0.5s;
 }
 
 .saturn {
@@ -148,6 +164,8 @@ img {
 .saturn-img {
   width: 4.5em;
   height: 4.5em;
+
+  transition: width 0.5s, height 0.5s;
 }
 
 .uranus {
@@ -161,6 +179,8 @@ img {
 .uranus-img {
   width: 4em;
   height: 4em;
+
+  transition: width 0.5s, height 0.5s;
 }
 
 .neptune {
@@ -174,6 +194,8 @@ img {
 .neptune-img {
   width: 4em;
   height: 4em;
+
+  transition: width 0.5s, height 0.5s;
 }
 
 .pluto {
@@ -186,6 +208,8 @@ img {
 .pluto-img {
   width: 4em;
   height: 4em;
+
+  transition: width 0.5s, height 0.5s;
 }
 
 .mercury-img::before,
@@ -198,16 +222,6 @@ img {
 .uranus-img::before,
 .neptune-img::before,
 .pluto-img::before {
-  /* .mercury::before,
-  .venus::before,
-  .earth::before,
-  .moon::before,
-  .mars::before,
-  .jupiter::before,
-  .saturn::before,
-  .uranus::before,
-  .neptune::before,
-  .pluto::before { */
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -329,4 +343,53 @@ img {
   font-size: 24px;
   cursor: pointer;
   color: #333;
+}
+
+.mercury-img.big-size::before,
+.venus-img.big-size::before,
+.earth-img.big-size::before,
+.moon-img.big-size::before,
+.mars-img.big-size::before,
+.jupiter-img.big-size::before,
+.saturn-img.big-size::before,
+.uranus-img.big-size::before,
+.neptune-img.big-size::before,
+.pluto-img.big-size::before {
+  width: 100em;
+  height: 100em;
+
+  animation: none;
+
+  top: 0;
+  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Planets Select */
+.planets-select .form-select {
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  border: solid 2px;
+  border-radius: 1px;
+
+  text-transform: capitalize;
+}
+
+.planets-select .form-select:focus {
+  border: #222;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #ccc;
+}
+
+.planets-select .form-select option {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Planet Info */
+.planet-info {
+  color: #fff;
 }
