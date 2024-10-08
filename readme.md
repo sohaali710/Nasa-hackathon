@@ -6,7 +6,7 @@ Welcome to the **3D Solar System Simulation**, an immersive and interactive 3D v
 
 This simulation accurately represents planets, moons, and other space objects with detailed textures, realistic lighting, and interactive controls. You can explore the solar system from any angle, adjust settings in real-time, and enjoy special effects like glow and shadows for a visually stunning experience.
 
-For a live demo, please visit: [https://solar-system-3-d-main.vercel.app/]
+For a live demo, please visit: [https://solar-system-3-d-main.vercel.app/] (https://solar-system-3-d-main.vercel.app/)
 
 ![Solar_System](images/solar_system.png)
 
